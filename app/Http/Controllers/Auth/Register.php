@@ -75,11 +75,13 @@ class Register extends Controller
         $created = User::create($dataUser);
         if (!empty($created)){
 
-            Deposit::create([
-                'user' => $created->id,'amount' => $web->signupBonus,
-                'reference' =>$this->generateId('deposits','reference'),
-                'asset'=>'USD','details' => 'Sign-up Bonus'
-            ]);
+            if ($web->signupBonus>0) {
+                Deposit::create([
+                    'user' => $created->id, 'amount' => $web->signupBonus,
+                    'reference' => $this->generateId('deposits', 'reference'),
+                    'asset' => 'USD', 'details' => 'Sign-up Bonus'
+                ]);
+            }
             //check if user needs to verify their account or not
             switch ($created->emailVerified){
                 case 1:
