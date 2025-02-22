@@ -189,6 +189,7 @@
                                         <li><a href="{{url('faqs')}}">Frequently Asked Questions</a></li>
                                         <li><a href="{{url('terms')}}">Terms & Conditions</a></li>
                                         <li><a href="{{url('privacy')}}">Privacy policy</a></li>
+                                        <li><a href="{{ asset('nexifortcapital.pdf') }}" target="_blank">Our Certification</a></li>
                                     </ul>
                                 </li>
                                 <li class="dropdown">
