@@ -2,51 +2,53 @@
 @section('content')
     <!--Page Header Start-->
     <section class="page-header">
-        <div class="page-header__bg" style="background-image: url({{asset('home/images/backgrounds/page-header-bg.jpg')}}');">
-        </div>
-        <div class="page-header__shape-one float-bob-x-2"></div>
-        <div class="page-header__shape-2 float-bob-y">
-            <img src="{{asset('home/images/shapes/page-header-shape-2.png')}}" alt="">
-        </div>
-        <div class="page-header__shape-3 float-bob-x">
-            <img src="{{asset('home/images/shapes/page-header-shape-3.png')}}" alt="">
-        </div>
-        <div class="page-header__shape-4 float-bob-y">
-            <img src="{{asset('home/images/shapes/page-header-shape-4.png')}}" alt="">
-        </div>
+        <div class="page-header__bg"></div><!-- /.page-header__bg -->
+        <div class="page-header-shape-1"></div><!-- /.page-header-shape-1 -->
+        <div class="page-header-shape-2"></div><!-- /.page-header-shape-2 -->
+        <div class="page-header-shape-3"></div><!-- /.page-header-shape-3 -->
+
         <div class="container">
-            <div class="page-header__inner text-left">
+            <div class="page-header__inner">
                 <ul class="thm-breadcrumb list-unstyled">
-                    <li><a href="{{url('/')}}">Home</a></li>
-                    <li>{{$pageName}}</li>
+                    <li><a href="{{ url('/') }}">Home</a></li>
+                    <li><span>/</span></li>
+                    <li>{{ $pageName }}</li>
                 </ul>
-                <h2>{{$pageName}}</h2>
+                <h2>{{ $pageName }}</h2>
             </div>
         </div>
     </section>
     <!--Page Header End-->
 
-    <!-- Start About Area -->
-    <div class="about-area ptb-100 mt-5">
+    <!--About Start-->
+    <section class="about">
         <div class="container">
-            <div class="row m-0">
-                <div class="col-xl-6">
-                    <div class="why-choose-one__left">
-                        <div class="why-choose-one__img-box wow slideInLeft" data-wow-delay="100ms"
-                             data-wow-duration="2500ms">
-                            <div class="why-choose-one__img">
-                                <img src="{{asset('home/images/resources/why-choose-one-1.jpg')}}" alt="">
-                            </div>
+            <div class="row">
+                <div class="col-xl-6 col-lg-6">
+                    <div class="about__img-box">
+                        <div class="about-img">
+                            <img src="{{asset('home/images/resources/about-img-1.jpg')}}" alt="">
                         </div>
                     </div>
                 </div>
-
-                <div class="col-lg-6 col-md-12 p-0">
-                    <div class="about-text">
-                        <span class="sub-title">ABOUT US</span>
-                        <h2>Your Pathway to Financial Freedom</h2>
-                        <p>
-                           Founded in 2014, we are a global investment agency helping individuals build their financial dreams into reality. From a humble beginning, we have grown to become a notable force in the investment industry with over 40K+ users.
+                <div class="col-xl-6 col-lg-6">
+                    <div class="about__right">
+                        <h2 class="about__title">Leading the Way in Smart Investments</h2>
+                        <div class="about__icon-box">
+                            <div class="about__icon">
+                                <span class="icon-data-analytics"></span>
+                            </div>
+                            <div class="about__icon-text">
+                                <p>{{ $siteName }} combines deep market insight with proven strategies to help you grow and protect your wealth with confidence.</p>
+                            </div>
+                        </div>
+                        <p class="about__right-text">Our approach is built on transparency, risk management, and tailored financial planning. From first-time investors to seasoned capital holders, we provide guidance you can trust at every stage of your journey.</p>
+                    </div>
+                </div>
+                <div class="col-xl-12 col-lg-12">
+                    <div class="about__right">
+                        <p class="about__right-text">
+                            Founded in 2014, we are a global investment agency helping individuals build their financial dreams into reality. From a humble beginning, we have grown to become a notable force in the investment industry with over 40K+ users.
                         </p>
                         <p class="about-one__text-2">{{$siteName}} stands as one of the largest and most seasoned international private equity firms. Our accomplished team of investment professionals is primarily dedicated to strategic investments.</p>
                         <p class="about-one__text-2">
@@ -58,42 +60,47 @@
                         <p class="about-one__text-2">
                             Throughout our existence, we've aimed to balance lower risk and higher profits for our customers through innovative analysis, information dispersion, and expert assistance. Our team includes experienced professionals with diverse and in-depth knowledge, enhancing the entire investing process.
                         </p>
-                        <div class="row justify-content-center">
-                            <div class="col-lg-4 col-md-4 col-sm-4 col-6">
-                                <div class="single-about-box">
-                                    <div class="icon">
-                                        <i class="ri-star-line"></i>
+                        <div class="listen__progress-wrap">
+                            <div class="listen__progress">
+                                <div class="listen__progress-box">
+                                    <div class="circle-progress"
+                                         data-options='{ "value": 0.9,"thickness": 3,"emptyFill": "#f2f4f8","lineCap": "square", "size": 112, "fill": { "color": "#3c72fc" } }'>
                                     </div>
-                                    <h3>Consistency</h3>
+                                    <span>90%</span>
+                                </div>
+                                <div class="listen__progress-content">
+                                    <h3>Cost-Efficient Solutions</h3>
                                 </div>
                             </div>
-                            <div class="col-lg-4 col-md-4 col-sm-4 col-6">
-                                <div class="single-about-box">
-                                    <div class="icon">
-                                        <i class="ri-settings-2-line"></i>
+                            <div class="listen__progress">
+                                <div class="listen__progress-box">
+                                    <div class="circle-progress"
+                                         data-options='{ "value": 5,"thickness": 3,"emptyFill": "#f2f4f8","lineCap": "square", "size": 112, "fill": { "color": "#3c72fc" } }'>
                                     </div>
-                                    <h3>Strategy</h3>
+                                    <span>500%</span>
+                                </div>
+                                <div class="listen__progress-content">
+                                    <h3>Client Portfolio Growth</h3>
                                 </div>
                             </div>
-                            <div class="col-lg-4 col-md-4 col-sm-4 col-6">
-                                <div class="single-about-box">
-                                    <div class="icon">
-                                        <i class="ri-line-chart-line"></i>
-                                    </div>
-                                    <h3>Investment</h3>
-                                </div>
+                        </div>
+
+                        <div class="about__phone-contact">
+                            <div class="about__phone-contact-icon">
+                                <span class="icon-phone-ringing"></span>
+                            </div>
+                            <div class="about__phone-contact-text">
+                                <p>Have questions? Get Support</p>
+                                <a href=" {{ ($web->phone)? "tel:$web->phone":route('register') }}">{{ ($web->phone)? $web->phone:"Register" }}</a>
                             </div>
                         </div>
                     </div>
                 </div>
-
-                <div class="col-lg-12 col-md-12 p-0">
-                   <img src="{{asset('home/images/minancecert.jpeg')}}" alt="">
-                </div>
             </div>
         </div>
-    </div>
-    <!-- End About Area -->
+    </section>
+    <!--About End-->
+
 
     <section class="services-page-v-2">
         <div class="container">

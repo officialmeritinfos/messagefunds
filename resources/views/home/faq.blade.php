@@ -2,25 +2,19 @@
 @section('content')
     <!--Page Header Start-->
     <section class="page-header">
-        <div class="page-header__bg" style="background-image: url({{asset('home/images/backgrounds/page-header-bg.jpg')}}');">
-        </div>
-        <div class="page-header__shape-one float-bob-x-2"></div>
-        <div class="page-header__shape-2 float-bob-y">
-            <img src="{{asset('home/images/shapes/page-header-shape-2.png')}}" alt="">
-        </div>
-        <div class="page-header__shape-3 float-bob-x">
-            <img src="{{asset('home/images/shapes/page-header-shape-3.png')}}" alt="">
-        </div>
-        <div class="page-header__shape-4 float-bob-y">
-            <img src="{{asset('home/images/shapes/page-header-shape-4.png')}}" alt="">
-        </div>
+        <div class="page-header__bg"></div><!-- /.page-header__bg -->
+        <div class="page-header-shape-1"></div><!-- /.page-header-shape-1 -->
+        <div class="page-header-shape-2"></div><!-- /.page-header-shape-2 -->
+        <div class="page-header-shape-3"></div><!-- /.page-header-shape-3 -->
+
         <div class="container">
-            <div class="page-header__inner text-left">
+            <div class="page-header__inner">
                 <ul class="thm-breadcrumb list-unstyled">
-                    <li><a href="{{url('/')}}">Home</a></li>
-                    <li>{{$pageName}}</li>
+                    <li><a href="{{ url('/') }}">Home</a></li>
+                    <li><span>/</span></li>
+                    <li>{{ $pageName }}</li>
                 </ul>
-                <h2>{{$pageName}}</h2>
+                <h2>{{ $pageName }}</h2>
             </div>
         </div>
     </section>

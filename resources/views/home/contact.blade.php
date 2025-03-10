@@ -2,76 +2,68 @@
 @section('content')
     <!--Page Header Start-->
     <section class="page-header">
-        <div class="page-header__bg" style="background-image: url({{asset('home/images/backgrounds/page-header-bg.jpg')}}');">
-        </div>
-        <div class="page-header__shape-one float-bob-x-2"></div>
-        <div class="page-header__shape-2 float-bob-y">
-            <img src="{{asset('home/images/shapes/page-header-shape-2.png')}}" alt="">
-        </div>
-        <div class="page-header__shape-3 float-bob-x">
-            <img src="{{asset('home/images/shapes/page-header-shape-3.png')}}" alt="">
-        </div>
-        <div class="page-header__shape-4 float-bob-y">
-            <img src="{{asset('home/images/shapes/page-header-shape-4.png')}}" alt="">
-        </div>
+        <div class="page-header__bg"></div><!-- /.page-header__bg -->
+        <div class="page-header-shape-1"></div><!-- /.page-header-shape-1 -->
+        <div class="page-header-shape-2"></div><!-- /.page-header-shape-2 -->
+        <div class="page-header-shape-3"></div><!-- /.page-header-shape-3 -->
+
         <div class="container">
-            <div class="page-header__inner text-left">
+            <div class="page-header__inner">
                 <ul class="thm-breadcrumb list-unstyled">
-                    <li><a href="{{url('/')}}">Home</a></li>
-                    <li>{{$pageName}}</li>
+                    <li><a href="{{ url('/') }}">Home</a></li>
+                    <li><span>/</span></li>
+                    <li>{{ $pageName }}</li>
                 </ul>
-                <h2>{{$pageName}}</h2>
+                <h2>{{ $pageName }}</h2>
             </div>
         </div>
     </section>
     <!--Page Header End-->
 
-    <!--FAQ Page Start-->
-    <section class="faq-page">
+    <<!--Locations Start-->
+    <section class="locations">
         <div class="container">
-            <div class="faq-page__top">
-                <div class="row row-cols-1 row-cols-md-3 g-4">
-                    <!-- Address Card -->
-                    <div class="col">
-                        <div class="card h-100">
-                            <div class="card-body">
-                                <h5 class="card-title">Address</h5>
-                                <p class="card-text">{!! $web->address !!}</p>
-                            </div>
+            <div class="location__inner">
+                <div class="section-title text-center">
+                    <h2 class="section-title__title">Our Contact Lines</h2>
+                </div>
+                <div class="row">
+                    <div class="col-xl-3 col-lg-6 col-md-6 wow fadeInUp" data-wow-delay="0ms" data-wow-duration="1500ms">
+                        <!--Locations Single-->
+                        <div class="locations__single">
+                            <h3 class="locations__title">Address</h3>
+                            <p class="locations__text">{{$web->address}}</p>
+                        </div>
+                    </div>
+
+                    <div class="col-xl-3 col-lg-6 col-md-6 wow fadeInUp" data-wow-delay="300ms" data-wow-duration="1500ms">
+                        <!--Locations Single-->
+                        <div class="locations__single">
+                            <h3 class="locations__title">Email</h3>
+                            <p class="locations__text">
+                                <a href="mailto:{{$web->email}}" class="locations__mail">{{ $web->email }}</a>
+                            </p>
                         </div>
                     </div>
 
                     @if($web->phone)
-                        <!-- Phone Card -->
-                        <div class="col">
-                            <div class="card h-100">
-                                <div class="card-body">
-                                    <h5 class="card-title">Phone</h5>
-                                    <p class="card-text">
-                                        <a href="tel:{{$web->phone}}">Call</a>
-                                    </p>
-                                </div>
+                        <div class="col-xl-3 col-lg-6 col-md-6 wow fadeInUp" data-wow-delay="600ms" data-wow-duration="1500ms">
+                            <!--Locations Single-->
+                            <div class="locations__single">
+                                <h3 class="locations__title">Whatsapp Us</h3>
+                                <h4 class="locations__mail-phone-box">
+                                    <a href="tel:{{ $web->phone }}" class="locations__phone">{{ $web->phone }}</a>
+                                </h4>
                             </div>
                         </div>
                     @endif
 
-                    <!-- Email Card -->
-                    <div class="col">
-                        <div class="card h-100">
-                            <div class="card-body">
-                                <h5 class="card-title">Email</h5>
-                                <p class="card-text">
-                                    <a href="mailto:{{$web->email}}">{{$web->email}}</a>
-                                </p>
-                            </div>
-                        </div>
-                    </div>
                 </div>
-
             </div>
         </div>
     </section>
-    <!-- Business One -->
+    <!--Locations End-->
+
 
 
 
