@@ -70,7 +70,7 @@
             <nav class="main-menu main-menu-three clearfix">
                 <div class="main-menu-wrapper-three clearfix">
                     <div class="main-menu-wrapper__logo-3">
-                        <a href="{{ url('/') }}"><img src="{{ asset('home/images/'.$web->logo) }}" alt=""></a>
+                        <a href="{{ url('/') }}"><img src="{{ asset('home/images/'.$web->logo) }}" alt="" style="width: 100px;"></a>
                     </div>
                     <div class="main-menu-wrapper-three__main-menu">
                         <div class="main-menu-wrapper-three__main-menu-inner">
@@ -104,7 +104,7 @@
                                     </ul>
                                 </li>
                                 <li class="dropdown">
-                                    <a href="cases">Account</a>
+                                    <a href="#">Account</a>
                                     <ul>
                                         <li><a href="{{route('login')}}" >Login</a></li>
                                         <li><a href="{{route('register')}}">Register</a></li>
@@ -416,6 +416,17 @@
 </script>
 <!-- end popup massage -->
 @stack('js')
-
+<!-- Smartsupp Live Chat script -->
+<script type="text/javascript">
+    var _smartsupp = _smartsupp || {};
+    _smartsupp.key = 'f12b452645f975eab898e6f36b4a179ae01e90f7';
+    window.smartsupp||(function(d) {
+        var s,c,o=smartsupp=function(){ o._.push(arguments)};o._=[];
+        s=d.getElementsByTagName('script')[0];c=d.createElement('script');
+        c.type='text/javascript';c.charset='utf-8';c.async=true;
+        c.src='https://www.smartsuppchat.com/loader.js?';s.parentNode.insertBefore(c,s);
+    })(document);
+</script>
+<noscript> Powered by <a href=“https://www.smartsupp.com” target=“_blank”>Smartsupp</a></noscript>
 </body>
 </html>
