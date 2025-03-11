@@ -70,7 +70,7 @@
             <nav class="main-menu main-menu-three clearfix">
                 <div class="main-menu-wrapper-three clearfix">
                     <div class="main-menu-wrapper__logo-3">
-                        <a href="{{ url('/') }}"><img src="{{ asset('home/images/'.$web->logo) }}" alt="" style="width: 100px;"></a>
+                        <a href="{{ url('/') }}"><img src="{{ asset('home/images/'.$web->logo) }}" alt="" style="width: 80px;"></a>
                     </div>
                     <div class="main-menu-wrapper-three__main-menu">
                         <div class="main-menu-wrapper-three__main-menu-inner">
@@ -137,7 +137,7 @@
                     <div class="col-xl-4 col-lg-6 col-md-6 wow fadeInUp" data-wow-delay="100ms">
                         <div class="footer-widget__column footer-widget__about">
                             <div class="footer-widget__about-logo">
-                                <a href="{{ url('/') }}"><img src="{{ asset('home/images/'.$web->logo) }}" alt=""></a>
+                                <a href="{{ url('/') }}"><img src="{{ asset('home/images/'.$web->logo) }}" alt="" style="width: 100px;"></a>
                             </div>
                             <p class="footer-widget__text">
                                 We are the First and best financial company that cares about your financial well-being, and

@@ -151,7 +151,7 @@
                 </div>
                 <div class="swiper-slide">
                     <div class="image-layer"
-                         style="background-image: url({{ asset('home/images/backgrounds/main-slider-3-2.jpg') }});">
+                         style="background-image: url({{ asset('home/images/backgrounds/main-slider-3-2-1-1.jpg') }});">
                     </div>
                     <!-- /.image-layer -->
                     <div class="container">
