@@ -133,7 +133,7 @@
             <div class="swiper-wrapper">
                 <div class="swiper-slide">
                     <div class="image-layer"
-                         style="background-image: url({{ asset('home/images/backgrounds/main-slider-3-1.jpg') }});">
+                         style="background-image: url({{ asset('home/images/backgrounds/main-slider-3-1-1-1.jpg') }});">
                     </div>
                     <!-- /.image-layer -->
                     <div class="container">
